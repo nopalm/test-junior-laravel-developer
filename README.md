@@ -16,21 +16,28 @@ Features:
 
 ## How to use : 
 
-- composer install
+- Composer install
 ```
 composer install
 ```
-- npm install 
+- Npm install 
 ```
 npm install && run dev
 ```
-- migrate
+- Migrate database
 ```
 php artisan migrate:fresh --seed
+```
+
+- Generate New Key
+```
+php artisan key:generate
+
 ```
 
 - User login:
 ```
 email : admin@admin.com
 password : password
+
 ```
