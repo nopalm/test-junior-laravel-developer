@@ -28,8 +28,9 @@ class CompanyFactory extends Factory
     {
         $filepath = storage_path('app/public/img_logo');
 
+        // Check path file exist or not
         if(!File::exists($filepath)){
-            File::makeDirectory($filepath);  //follow the declaration to see the complete signature
+            File::makeDirectory($filepath);  
         }
         return [
             'name' => $this->faker->name(),
