@@ -8,6 +8,10 @@ use App\Http\Requests\CompanyStoreRequest;
 
 use App\Models\Company;
 
+use Mail;
+
+use App\Mail\CreateNewCompany;
+
 class CompanyController extends Controller
 {
     /**
@@ -50,6 +54,8 @@ class CompanyController extends Controller
         }
 
         $company->save();
+
+        Mail::to($request->user())->send(new CreateNewCompany($company));
         
         return redirect()->route('company.index')->with('add','Success add data');
     }
