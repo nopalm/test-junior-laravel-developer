@@ -36,7 +36,8 @@
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Logo</label> <br>
                             <img class="img-fluid mt-2 mb-2"
-                                src="{{ asset('storage/'.$company->logo) }}" style="width:40%;">
+                                src="{{ asset('storage/img_logo/'.$company->logo) }}"
+                                style="width:40%;">
                             <p class="text-sm text-danger">Fill empty if image not changed</p>
                             <input type="file" name="logo" class="form-control">
 
